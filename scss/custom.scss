@@ -1,0 +1,204 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1110px,
+        xxl: 1110px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 928px,
+        xl: 1110px,
+        xxl: 1110px
+);
+$theme-colors: (
+        primary: #000,
+        secondary: #FFF,
+        success: #1e6111,
+        info:  #64c3d2,
+        warning: #f5e74a,
+        danger: #EC1C24,
+        bg: #FFF,
+        submit: #A1A1A1
+);
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer * .75,
+        4: $spacer * 1,
+        5: $spacer * 1.25,
+        6: $spacer * 3
+);
+$border-color: #E3E3E3;
+$navbar-toggler-transition: 0;
+$navbar-light-toggler-icon-bg: url(/img/icons/бургер.svg);
+$form-floating-padding-x:         2rem;
+$form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.4rem);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+  scrollbar-width: thin; /* Толщина полосы прокрутки */
+  scrollbar-color: #A1A1A1 transparent; /* Цвет полосы прокрутки */
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.form-select {
+  --bs-form-select-bg-img: none;
+}
+.select-form-start {
+  border-top-left-radius: 2.14286rem;
+  border-bottom-left-radius: 2.14286rem;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+
+}
+.select-form-end {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 2.14286rem;
+  border-top-right-radius: 2.14286rem;
+}
+
+.dropdown-menu {
+  border-radius: $border-radius-xxl
+}
+.dropdown-item {
+  column-gap: 0.71rem;
+  margin-bottom: 0.93rem;
+}
+.dropdown-toggle::after {
+    content: none
+}
+
+
+.form-check-input:checked[type=checkbox] {
+  border-radius: 50%;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 50%;
+}
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+.form-check-input {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 2.14286rem;
+  border: 2px solid #D4D4D4;
+  margin: 0;
+  vertical-align: middle;
+  &:focus {
+    border-radius: 2.14286rem;
+    border: 2px solid #D4D4D4;
+  }
+  &:checked {
+    background-color: #463998;
+    border-color: #463998;
+    &[type="checkbox"] {
+      background-image: url("/img/icons/checksvg.svg");
+      background-size: inherit;
+    }
+  }
+}
+.popularTour, .allTour  {
+  margin-top: 2.86rem;
+
+}
+.popularTour {
+  padding: 0 0 0 2.86rem;
+
+}
+
+.popularTour, .allTour {
+  overflow-y: auto;
+  height: 25rem;
+}
+
+.popularTour::-webkit-scrollbar, .allTour::-webkit-scrollbar {
+  width: 5px; /* Ширина полосы прокрутки */
+  cursor: pointer;
+}
+
+.popularTour::-webkit-scrollbar-thumb, .allTour::-webkit-scrollbar-thumb {
+  background-color: #A1A1A1; /* Цвет ползунка */
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.popularTour::-webkit-scrollbar-track, .allTour::-webkit-scrollbar-track {
+  background-color: transparent; /* Цвет фона полосы прокрутки */
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.popularTour::-ms-scrollbar, .allTour::-ms-scrollbar {
+  width: 8px; /* Ширина полосы прокрутки */
+  height: 8px;
+  cursor: pointer;
+
+}
+
+/* Для Edge */
+.popularTour::-ms-scrollbar-thumb, .allTour::-ms-scrollbar-thumb {
+  background-color: #888888; /* Цвет ползунка */
+  cursor: pointer;
+}
+
+.popularTour::-ms-scrollbar-track, .allTour::-ms-scrollbar-track {
+  background-color: #f4f4f4; /* Цвет фона полосы прокрутки */
+  cursor: pointer;
+}
+
+.buttonCheck {
+  width: 10.2rem;
+  border-radius: 2.14rem;
+  margin-left: -0.5rem;
+  color: #FFF;
+  font-size: 1.14286rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+
+}
+
+.tourCheck {
+  padding-top: 1.43rem;
+  border-top: 1px solid #D4D4D4;
+}
+.clearCheck {
+  padding: 0 0 0 2.86rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3.71rem;
+  //scroll-snap-type: x proximity;
+}
+.swiper-block {
+  margin-bottom: 10rem;
+}
+
+
+

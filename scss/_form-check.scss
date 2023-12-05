@@ -1,0 +1,9 @@
+.form-check-input {
+  &:checked {
+    background-color: #463998;
+    border-color: #463998;
+    &[type="checkbox"] {
+      background-image: url("public/img/icons/checksvg.svg");
+    }
+  }
+}
